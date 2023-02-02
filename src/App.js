@@ -37,10 +37,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className='containerInput' onSubmit={ enterSearch }>
+      <form className='containerInput' onSubmit={ enterSearch }>
         <input onChange={ inputValue } placeholder='Search...' value={ search }/>
         <button onClick={ enterSearch }><img className='btnSearchImage' src={ btnSearch } alt='btnSearch'/></button>
-      </div>
+      </form>
       <div className='container'>
         {myRecipes.map((item, index) => (
           <RecipesComponent key={ index }
